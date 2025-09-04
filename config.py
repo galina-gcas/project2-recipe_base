@@ -1,8 +1,13 @@
+# config.py
 # Конфигурация бота
+
+from dotenv import load_dotenv
 import os
 
+load_dotenv()
+
 # Токен Telegram бота (получить у @BotFather)
-BOT_TOKEN = os.getenv('BOT_TOKEN', '8221714386:AAHZtO1WfQxfvTMRlf6B08zCgGykTT1ZDPQ')
+BOT_TOKEN = os.getenv('BOT_TOKEN')
 
 # API настройки для TheMealDB
 MEAL_DB_BASE_URL = "https://www.themealdb.com/api/json/v1/1"
