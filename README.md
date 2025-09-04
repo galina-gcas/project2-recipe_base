@@ -1,6 +1,7 @@
 # project2-recipe_base
 A Telegram bot offering a wide selection of recipes
 
+
 # 🍽 Recipe Telegram Bot
 
 Telegram bot for searching recipes and saving favorites.
@@ -64,4 +65,5 @@ In config.py you can change:
 - /start - Start the bot and open the main menu  
 - 🔍 Search recipes - Find new recipes  
 - ⭐️ My recipes - View favorite recipes  
+
 
