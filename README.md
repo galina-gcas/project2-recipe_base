@@ -52,13 +52,34 @@ In config.py you can change:
 - Search limits  
 - Database settings  
 
+## 🚀 Деплой на PythonAnywhere
+
+Для деплоя на PythonAnywhere как Flask приложение:
+
+1. **Подготовка**: Следуйте инструкциям в [DEPLOY_GUIDE.md](DEPLOY_GUIDE.md)
+2. **Файлы для деплоя**:
+   - `app.py` - Flask приложение
+   - `wsgi.py` - WSGI конфигурация
+   - `requirements.txt` - обновлен с Flask
+   - `env_example.txt` - пример переменных окружения
+
+3. **Быстрый старт**:
+   ```bash
+   # Загрузите файлы на PythonAnywhere
+   # Установите зависимости
+   pip install -r requirements.txt
+   # Создайте .env файл с BOT_TOKEN
+   # Настройте Web App в панели PythonAnywhere
+   ```
+
 ## 📝 TODO
 
-- [ ] Integration with TheMealDB API  
-- [ ] Database for favorite recipes  
-- [ ] Recipe search by name and ingredients  
-- [ ] View detailed recipe information  
-- [ ] Favorites system  
+- [x] Integration with TheMealDB API  
+- [x] Database for favorite recipes  
+- [x] Recipe search by name and ingredients  
+- [x] View detailed recipe information  
+- [x] Favorites system  
+- [x] Flask app for deployment
 
 ## 🤖 Bot Commands
 

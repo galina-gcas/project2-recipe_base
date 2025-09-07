@@ -16,8 +16,8 @@ MEAL_DB_BASE_URL = "https://www.themealdb.com/api/json/v1/1"
 DATABASE_NAME = "recipes_bot.db"
 
 # Настройки API (если понадобятся другие сервисы)
-EDAMAM_APP_ID = os.getenv('EDAMAM_APP_ID', '')
-EDAMAM_APP_KEY = os.getenv('EDAMAM_APP_KEY', '')
+# EDAMAM_APP_ID = os.getenv('EDAMAM_APP_ID', '')
+# EDAMAM_APP_KEY = os.getenv('EDAMAM_APP_KEY', '')
 
 # Лимиты
 MAX_RECIPES_PER_SEARCH = 10
