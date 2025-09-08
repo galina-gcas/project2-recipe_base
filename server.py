@@ -12,19 +12,16 @@ def _run_bot_polling():
     telegram_bot.infinity_polling()
 
 
-@app.before_first_request
-def start_bot_thread():
-    global _bot_thread
-    if _bot_thread is None or not _bot_thread.is_alive():
-        _bot_thread = threading.Thread(target=_run_bot_polling, daemon=True)
-        _bot_thread.start()
-
-
 @app.route("/")
 def root():
     return "OK", 200
 
 
 if __name__ == "__main__":
+    # Start polling thread once at process start (Flask 3 removed before_first_request)
+    if _bot_thread is None or not _bot_thread.is_alive():
+        _bot_thread = threading.Thread(target=_run_bot_polling, daemon=True)
+        _bot_thread.start()
+
     port = int(os.getenv("PORT", "10000"))
     app.run(host="0.0.0.0", port=port)
